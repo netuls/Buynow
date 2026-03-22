@@ -317,7 +317,7 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#" id="logoClick" onclick="adminClickCount()">Buy<span>Now</span></a>
+  <a class="nav-logo" href="#">Buy<span>Now</span></a>
   <div class="nav-search">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
       <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
@@ -701,16 +701,6 @@
   });
   document.addEventListener('keydown', e => { if(e.key==='Escape') fecharAdmin(); });
 
-  // Acesso admin oculto: clique 5x no logo
-  let _clicks = 0, _timer = null;
-  function adminClickCount() {
-    _clicks++;
-    clearTimeout(_timer);
-    _timer = setTimeout(() => _clicks = 0, 2000);
-    if (_clicks >= 5) { _clicks = 0; abrirAdmin(); }
-  }
-
-  // Init
   renderProdutos();
 </script>
 </body>
